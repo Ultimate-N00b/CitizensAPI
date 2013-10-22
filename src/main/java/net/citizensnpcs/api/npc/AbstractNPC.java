@@ -329,7 +329,7 @@ public abstract class AbstractNPC implements NPC {
         if (!isSpawned())
             return;
         LivingEntity bukkitEntity = getBukkitEntity();
-        bukkitEntity.setCustomName(getFullName());
+        bukkitEntity.setCustomName(ChatColor.translateAlternateColorCodes('&', getFullName()));
         if (bukkitEntity.getType() == EntityType.PLAYER) {
             Location old = bukkitEntity.getLocation();
             despawn(DespawnReason.PENDING_RESPAWN);
